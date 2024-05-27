@@ -19,7 +19,7 @@ public class FileService(ILogger<FileService> logger, DataContext dataContext, B
     public async Task SetBlobContainerAsync(string containerName)
     {
         _container = _client.GetBlobContainerClient(containerName);
-        await _container.CreateIfNotExistsAsync(PublicAccessType.BlobContainer); 
+        await _container.CreateIfNotExistsAsync(PublicAccessType.BlobContainer); //vad bra det går
     }
 
     public string SetFileName(IFormFile file)
